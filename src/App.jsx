@@ -109,9 +109,9 @@ export default function App() {
         {sheets.map((s, i) => (
           <section className="page" key={s.top}>
             <div className="sheet-label noprint">Sheet {i + 1} of {sheets.length}</div>
-            <Voucher no={s.top} data={data[s.top]} set={setV} cfg={cfg} copyLabel="Master File Copy" />
-            <div className="cutline noprint" />
-            <Voucher no={s.bottom} data={data[s.bottom]} set={setV} cfg={cfg} copyLabel="Master Copy" />
+            <Voucher no={s.top} data={data[s.top]} set={setV} cfg={cfg} />
+            <div className="cutline"><span>✂ cut here</span></div>
+            <Voucher no={s.bottom} data={data[s.bottom]} set={setV} cfg={cfg} />
           </section>
         ))}
       </main>

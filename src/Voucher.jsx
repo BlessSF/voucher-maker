@@ -34,7 +34,7 @@ export const blankVoucher = () => ({
 
 export const totalOf = (v) => v.lines.reduce((t, l) => t + (parseFloat(l.amount) || 0), 0)
 
-export default function Voucher({ no, data, set, cfg, copyLabel }) {
+export default function Voucher({ no, data, set, cfg }) {
   if (no == null) return <div className="voucher empty" />
   const v = data || blankVoucher()
   const up = (k) => (e) => set(no, { ...v, [k]: e.target.value })
@@ -129,7 +129,6 @@ export default function Voucher({ no, data, set, cfg, copyLabel }) {
           <div className="sigcap">Signature over Printed Name &amp; Date</div>
         </div>
       </div>
-      <div className="copy">{copyLabel}</div>
     </div>
   )
 }
