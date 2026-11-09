@@ -69,7 +69,6 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .sig { display: grid; grid-template-columns: 1fr 1fr; }
 .mid { text-align: center; }
 .name { font-size: 8pt; margin-top: 14px; }
-.foot-left .lbl + .name { }
 .sig .name.ul { display: inline-block; border-bottom: 1px solid #000; }
 .role { font: bold 6pt 'Times New Roman'; } .role.center { text-align: center; width: 60%; }
 .approve { margin-top: 12px; }

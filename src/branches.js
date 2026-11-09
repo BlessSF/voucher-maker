@@ -42,7 +42,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'stella', label: 'STELLA', title: 'Stella', titleFont: "'Lobster', cursive", titleSize: '26pt', start: 1628,
+    id: 'stella', label: 'STELLA', logo: 'stella.png', start: 1628,
     defaults: {
       address: 'Greenfield, Diversion Road Mandurriao, Iloilo City',
       phone: 'Telephone No.: (033) 338-9995',
@@ -61,7 +61,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'dois', label: 'DOIS', title: 'DOIS', titleFont: "'Pacifico', cursive", titleSize: '20pt', start: 1200,
+    id: 'dois', label: 'DOIS', logo: 'dois.png', start: 1200,
     defaults: {
       address: 'TABUC SUBA JARO,ILOILO CITY',
       phone: 'Telephone No.: (033) 502-4953',
@@ -72,7 +72,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'recovery', label: 'RECOVERY SPA', title: 'RECOVERY SPA', titleFont: "'Shadows Into Light', cursive", titleSize: '23pt', showTin: true, start: 300,
+    id: 'recovery', label: 'RECOVERY SPA', logo: 'recovery.png', showTin: true, start: 300,
     defaults: {
       address: 'Blgd G & R, M.H. Del Pilar St. Brgy. Taal, Molo, Iloilo City',
       phone: 'Telephone No.: 09853359998',
@@ -90,7 +90,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'hero', label: 'HERO', title: 'HERO', showTin: true, start: 550,
+    id: 'hero', label: 'HERO', logo: 'hero.png', showTin: true, start: 550,
     defaults: {
       address: 'Diversion Road Mandurriao, Iloilo City',
       phone: 'Telephone No.: (033) 338-9995',
@@ -99,7 +99,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'personal', label: 'PERSONAL (MxM)', title: 'MxM', showTin: true, start: 139,
+    id: 'personal', label: 'PERSONAL (MxM)', logo: 'personal.png', showTin: true, start: 139,
     defaults: {
       address: 'Diversion Road Mandurriao, Iloilo City',
       phone: 'Telephone No.: (033) 338-9995',
