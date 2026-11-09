@@ -34,7 +34,7 @@ export const blankVoucher = () => ({
 
 export const totalOf = (v) => v.lines.reduce((t, l) => t + (parseFloat(l.amount) || 0), 0)
 
-export default function Voucher({ no, data, set, cfg }) {
+export default function Voucher({ no, data, set, cfg, branch }) {
   if (no == null) return <div className="voucher empty" />
   const v = data || blankVoucher()
   const up = (k) => (e) => set(no, { ...v, [k]: e.target.value })
@@ -45,10 +45,14 @@ export default function Voucher({ no, data, set, cfg }) {
   return (
     <div className="voucher">
       <div className="v-head">
-        <img src="logo.png" className="logo" alt="" />
+        {branch.logo ? (
+          <img src={`logos/${branch.logo}`} className="logo" alt="" />
+        ) : (
+          <div className="brand" style={{ fontFamily: branch.titleFont, fontSize: branch.titleSize }}>{branch.title}</div>
+        )}
         <div className="addr">{cfg.address}</div>
         <div className="addr2">{cfg.phone}</div>
-        <div className="tinline">TIN: {cfg.tin}</div>
+        {branch.showTin && <div className="tinline">TIN: {cfg.tin}</div>}
         <div className="title">CHECK VOUCHER</div>
         <div className="numblock">
           <div className="row"><span className="lbl">No.</span><b className="vno">{no}</b></div>

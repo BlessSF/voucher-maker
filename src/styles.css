@@ -33,8 +33,9 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .money { text-align: right; }
 
 .v-head { position: relative; text-align: center; padding-top: 4px; }
-.logo { height: .52in; display: block; margin: 0 auto 2px; }
-.addr { font-size: 5.5pt; }
+.logo { height: .55in; max-width: 2in; object-fit: contain; display: block; margin: 0 auto 2px; }
+.brand { font-weight: bold; line-height: 1.15; margin-bottom: 2px; }
+.addr { font-size: 6pt; }
 .addr2 { font-size: 6pt; }
 .tinline { font-size: 8pt; }
 .title { font-size: 9.5pt; font-weight: bold; color: #1155cc; text-decoration: underline; margin-top: 1px; }
