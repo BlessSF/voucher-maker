@@ -45,10 +45,11 @@ export default function Voucher({ no, data, set, cfg, branch }) {
   return (
     <div className="voucher">
       <div className={`v-head${branch.logoPos === 'left' ? ' has-left' : ''}`}>
-        {branch.logo ? (
+        {branch.logo && (
           <img src={`logos/${branch.logo}`} className={`logo${branch.logoPos === 'left' ? ' left' : ''}`} alt="" />
-        ) : (
-          <div className="brand" style={{ fontFamily: branch.titleFont, fontSize: branch.titleSize }}>{branch.title}</div>
+        )}
+        {branch.title && (
+          <div className="brand" style={{ fontFamily: branch.titleFont, fontSize: branch.titleSize, color: branch.titleTextColor }}>{branch.title}</div>
         )}
         <div className="addr">{cfg.address}</div>
         <div className="addr2">{cfg.phone}</div>

@@ -97,4 +97,4 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .logo.left { position: absolute; left: 8px; top: 6px; margin: 0; height: .72in; max-width: 1.2in; }
 .colorrow { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
 .colorrow input[type=color] { width: 60px; height: 32px; padding: 2px; cursor: pointer; }
-.v-head.has-left { min-height: 1.15in; padding-top: .22in; }
+.v-head.has-left { min-height: 1.2in; padding-top: .1in; }
