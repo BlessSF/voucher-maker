@@ -1,6 +1,8 @@
 * { box-sizing: border-box; }
 body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e7eb; }
 #root { display: flex; align-items: flex-start; }
+.topbar, .backdrop, .panel-head .close { display: none; }
+.panel-head { display: block; }
 
 /* control panel */
 .panel { width: 290px; flex: none; position: sticky; top: 0; height: 100vh; overflow: auto; padding: 16px; background: #fff; font: 13px system-ui, sans-serif; border-right: 1px solid #d1d5db; }
@@ -100,3 +102,19 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .v-head.has-left { min-height: 1.2in; padding-top: .1in; }
 .payfor.payline { border-bottom: 1px solid #000; margin: 6px -4px 0; padding: 12px 4px 3px; }
 .payfor.payline + .lines { margin-top: 6px; }
+
+/* ---------- small screens: settings become a slide-in drawer ---------- */
+@media screen and (max-width: 900px) {
+  #root { display: block; }
+  .topbar { display: flex; position: sticky; top: 0; z-index: 20; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; background: #fff; border-bottom: 1px solid #d1d5db; font: 14px system-ui, sans-serif; }
+  .topbar button { padding: 7px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font: inherit; cursor: pointer; }
+  .topbar button.primary { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+  .panel { position: fixed; z-index: 40; top: 0; left: 0; bottom: 0; width: min(330px, 90vw); height: auto; transform: translateX(-102%); transition: transform .2s ease; box-shadow: 2px 0 14px #0004; }
+  .panel.open { transform: none; }
+  .backdrop { display: block; position: fixed; inset: 0; z-index: 30; background: #0006; }
+  .panel-head { display: flex; justify-content: space-between; align-items: center; }
+  .panel-head .close { display: block; font-size: 24px; line-height: 1; padding: 2px 10px; }
+  .sheets { padding: 12px 0 24px; gap: 28px; }
+  .panel input, .panel select { font-size: 16px; }   /* stops iOS zooming on focus */
+}
+@media print { .topbar, .backdrop { display: none !important; } .page { zoom: 1 !important; } }

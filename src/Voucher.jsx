@@ -34,7 +34,7 @@ export const blankVoucher = () => ({
 
 export const totalOf = (v) => v.lines.reduce((t, l) => t + (parseFloat(l.amount) || 0), 0)
 
-export default function Voucher({ no, data, set, cfg, branch }) {
+function Voucher({ no, data, set, cfg, branch }) {
   if (no == null) return <div className="voucher empty" />
   const v = data || blankVoucher()
   const up = (k) => (e) => set(no, { ...v, [k]: e.target.value })
@@ -46,7 +46,7 @@ export default function Voucher({ no, data, set, cfg, branch }) {
     <div className="voucher">
       <div className={`v-head${branch.logoPos === 'left' ? ' has-left' : ''}`}>
         {branch.logo && (
-          <img src={`logos/${branch.logo}`} className={`logo${branch.logoPos === 'left' ? ' left' : ''}`} alt="" />
+          <img src={`logos/${branch.logo}`} className={`logo${branch.logoPos === 'left' ? ' left' : ''}`} alt="" decoding="async" />
         )}
         {branch.title && (
           <div className="brand" style={{ fontFamily: branch.titleFont, fontSize: branch.titleSize, color: branch.titleTextColor }}>{branch.title}</div>
@@ -137,3 +137,6 @@ export default function Voucher({ no, data, set, cfg, branch }) {
     </div>
   )
 }
+
+// memo: typing in one voucher no longer re-renders the other vouchers
+export default React.memo(Voucher)
