@@ -82,7 +82,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'multipliers', label: 'MULTIPLIERS', logo: 'multipliers.png', logoPos: 'left', title: 'MULTIPLIERS', titleTextColor: '#4d8a2a', showTin: true, start: 1099,
+    id: 'multipliers', label: 'MULTIPLIERS', logo: 'multipliers.png', logoPos: 'left', payLine: true, title: 'MULTIPLIERS', titleTextColor: '#4d8a2a', showTin: true, start: 1099,
     defaults: {
       address: 'Greenfield, Diversion Road Mandurriao, Iloilo City',
       phone: 'Telephone No.: (033) 338-9995',

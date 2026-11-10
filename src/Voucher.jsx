@@ -77,7 +77,7 @@ export default function Voucher({ no, data, set, cfg, branch }) {
         <div className="th"><span>PARTICULAR</span><span>AMOUNT</span></div>
         <div className="tb">
           <div className="tb-left">
-            <div className="payfor">
+            <div className={`payfor${branch.payLine ? ' payline' : ''}`}>
               <span className="lbl">Payment for:</span>
               <input className="fld" value={v.paymentFor} onChange={up('paymentFor')} />
             </div>
