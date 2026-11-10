@@ -93,6 +93,12 @@ export default function App() {
         <p className="hint">You can still edit any single voucher directly on the page.</p>
 
         <h2>Header &amp; signatories ({branch.label})</h2>
+        <label>CHECK VOUCHER color
+          <span className="colorrow">
+            <input type="color" value={cfg.titleColor || '#1155cc'} onChange={(e) => setCfg('titleColor', e.target.value)} />
+            <button onClick={() => setCfg('titleColor', branch.defaults.titleColor)}>Reset</button>
+          </span>
+        </label>
         <label>Address{text('address')}</label>
         <label>Phone{text('phone')}</label>
         {branch.showTin && <label>TIN{text('tin')}</label>}

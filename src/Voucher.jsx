@@ -44,16 +44,16 @@ export default function Voucher({ no, data, set, cfg, branch }) {
 
   return (
     <div className="voucher">
-      <div className="v-head">
+      <div className={`v-head${branch.logoPos === 'left' ? ' has-left' : ''}`}>
         {branch.logo ? (
-          <img src={`logos/${branch.logo}`} className="logo" alt="" />
+          <img src={`logos/${branch.logo}`} className={`logo${branch.logoPos === 'left' ? ' left' : ''}`} alt="" />
         ) : (
           <div className="brand" style={{ fontFamily: branch.titleFont, fontSize: branch.titleSize }}>{branch.title}</div>
         )}
         <div className="addr">{cfg.address}</div>
         <div className="addr2">{cfg.phone}</div>
         {branch.showTin && <div className="tinline">TIN: {cfg.tin}</div>}
-        <div className="title">CHECK VOUCHER</div>
+        <div className="title" style={{ color: cfg.titleColor }}>CHECK VOUCHER</div>
         <div className="numblock">
           <div className="row"><span className="lbl">No.</span><b className="vno">{no}</b></div>
           <div className="row"><span className="lbl">Run Date:</span><input className="fld ul" value={v.runDate} onChange={up('runDate')} /></div>

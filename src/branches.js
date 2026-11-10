@@ -10,6 +10,7 @@ const mk = (o) => ({
   ...o,
   defaults: {
     tin: '',
+    titleColor: '#1155cc',
     preparedRole: '',
     checkedRole: '',
     approvedBy: GM,
@@ -81,7 +82,7 @@ export const BRANCHES = [
     },
   }),
   mk({
-    id: 'multipliers', label: 'MULTIPLIERS', logo: 'multipliers.png', showTin: true, start: 1099,
+    id: 'multipliers', label: 'MULTIPLIERS', logo: 'multipliers.png', logoPos: 'left', showTin: true, start: 1099,
     defaults: {
       address: 'Greenfield, Diversion Road Mandurriao, Iloilo City',
       phone: 'Telephone No.: (033) 338-9995',

@@ -38,7 +38,7 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .addr { font-size: 6pt; }
 .addr2 { font-size: 6pt; }
 .tinline { font-size: 8pt; }
-.title { font-size: 9.5pt; font-weight: bold; color: #1155cc; text-decoration: underline; margin-top: 1px; }
+.title { font-size: 9.5pt; font-weight: bold; text-decoration: underline; margin-top: 1px; }
 .numblock { position: absolute; right: 6px; top: 62%; width: 36%; }
 .numblock .row { display: flex; align-items: flex-end; gap: 6px; justify-content: flex-end; }
 .numblock .row .ul { width: 64%; }
@@ -69,6 +69,7 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
 .sig { display: grid; grid-template-columns: 1fr 1fr; }
 .mid { text-align: center; }
 .name { font-size: 8pt; margin-top: 14px; }
+.foot-left .lbl + .name { }
 .sig .name.ul { display: inline-block; border-bottom: 1px solid #000; }
 .role { font: bold 6pt 'Times New Roman'; } .role.center { text-align: center; width: 60%; }
 .approve { margin-top: 12px; }
@@ -92,3 +93,8 @@ body { margin: 0; font-family: 'Times New Roman', Times, serif; background: #e5e
   .fld::placeholder { color: transparent; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+.logo.left { position: absolute; left: 8px; top: 6px; margin: 0; height: .72in; max-width: 1.2in; }
+.colorrow { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
+.colorrow input[type=color] { width: 60px; height: 32px; padding: 2px; cursor: pointer; }
+.v-head.has-left { min-height: 1.15in; padding-top: .22in; }
